@@ -1,0 +1,18 @@
+>  1  1  2  1  2
+f=1
+lambda=0.3/f
+h=lambda/4
+r=h/10
+x1=h
+x2=0
+x3=-h
+d=2.5*h
+N=4
+Dx=N*d/2
+Dy=N*d/2
+H=0.15
+a=0.5
+ca=0.2
+c=ca*a
+B=2*Dx
+A=0.3
