@@ -1,0 +1,19 @@
+>  1  1  2  1  2
+f=3
+lambda=0.3/f
+h=lambda/4
+N=20
+N1=N-1
+d=lambda/2
+D=(N-1)*d
+x0=-D/2
+y0=0
+r=h/10
+R=3
+pi=3.14
+phi1=pi/6
+phi2=pi/3
+x1=R*cos(phi1)
+y1=R*sin(phi1)
+x2=R*cos(phi2)
+y2=R*sin(phi2)
