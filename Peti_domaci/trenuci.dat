@@ -1,0 +1,5 @@
+          ----------------------------------------------------------------------------------------------------- ukupno cekanje:           0.00
+
+
+N      | Kmat  | Ukupno          | Bin HD -> RAM   | Bin RAM -> HD   | LU Dijag        | RAM -> GPU      | GPU -> RAM      | CTRSM           | CGEMM           | Zamena unapred  | Zamena unazad   | Zbir            | Vreme Bin HD -> RAM prilikom zamena | cekanje CGEMM  | cekanje CTRSM | prepakivanje 
+ 11519 |     6 |           17.37 |            0.00 |            0.00 |            1.90 |            1.68 |            0.97 |            2.91 |            9.19 |            0.18 |          109.64 |          126.47 |            0.00  |  ((           0.00,            0.00)  |             0.00  |             0.00 
