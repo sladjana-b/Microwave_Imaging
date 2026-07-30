@@ -32,10 +32,8 @@ for i=1:nx
     end
 end
 
-
-I(i,j) = 1/s;
-x=linspace(0.25,2.25,50);
-y=linspace(-1,1,50);
+x = linspace(min(x1(:)), max(x1(:)), nx);
+y = linspace(min(y1(:)), max(y1(:)), ny);
 
 I=I/max(max(I));
 figure,

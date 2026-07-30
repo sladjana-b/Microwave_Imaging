@@ -13,8 +13,7 @@ M_E = 2;               % broj generatora u Einc modelu: (0,0,0) i (0,0,D)
 [Y0, Z0, S0] = ReadAD1('objekat.ad1', f, M_ukupno);  
 [Y1, Z1, S1] = ReadAD1('niz.ad1',    f, M_ukupno);    
 
-[x1, y1, z1, Ex1, Ey1, Ez1, Hx1, Hy1, Hz1] = ...
-    ReadNF1_All('Einc.nf1', nx, ny, nz, M_E, P);
+[x1, y1, z1, Ex1, Ey1, Ez1, Hx1, Hy1, Hz1] = ReadNF1_All('Einc.nf1', nx, ny, nz, M_E, P);
 
 % naspramni parovi 
 DELTA = S0 - S1;                 
@@ -22,11 +21,10 @@ dS = zeros(M, M, P);
 l = 0;
 for ix = 1:nx
     for iy = 1:ny
-        l = l + 2;
+        l = l + 2; 
         dS(ix, iy, :) = DELTA(l-1, l, :);   % par naspramnih antena: portovi l-1 i l
     end
 end
-
 
 DS = zeros(M, M, P);
 for p = 1:P
@@ -51,16 +49,16 @@ for p = 1:P
 end
 
 
-% w = (g^H g)^-1 (g^H s) - pseudoinverz
 w = zeros(M, M);
 for i = 1:M
     for j = 1:M
         gij = squeeze(G_fft(i, j, :));   % P x 1
         Eij = squeeze(DS(i, j, :));      % P x 1  (merenje)
         w(i, j) = (gij' * gij) \ (gij' * Eij);
+        % w = (g^H g)^-1 (g^H s)
+
     end
 end
-
 
 W = ifft2(w);
 W = fftshift(W);

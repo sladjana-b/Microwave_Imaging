@@ -6,9 +6,6 @@ nx = 50;
 ny = 50;
 nz = 1;
 
-dodaj_sum = false;   % true samo sum
-SNR = 10;
-
 N = 8;               % vrednost sa grafika singular.vredn
 
 
@@ -17,17 +14,6 @@ N = 8;               % vrednost sa grafika singular.vredn
 [x1,y1,z1,Ex1,Ey1,Ez1,Hx1,Hy1,Hz1] = ReadNF1('niz.nf1',nx,ny,nz,M);
 
 dS = S0 - S1;
-
-%sum
-if dodaj_sum
-    rng(1)
-    for i=1:M
-        sig=dS(:,i);
-        sig=awgn(sig,SNR,'measured');
-        dS(:,i)=sig;
-    end
-end
-
 [U,Sigma,V] = svd(dS);
 
 singVr = diag(Sigma);
@@ -54,8 +40,8 @@ for ix = 1:nx
     end
 end
 
-x = linspace(-0.4,0.4,nx);
-y = linspace(-0.4,0.4,ny);
+x = linspace(min(x1(:)), max(x1(:)), nx);
+y = linspace(min(y1(:)), max(y1(:)), ny);
 
 I = I/max(max(I));
 

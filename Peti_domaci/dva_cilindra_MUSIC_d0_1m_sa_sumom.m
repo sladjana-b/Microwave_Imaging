@@ -9,7 +9,7 @@ nz = 1;
 dodaj_sum = true;   % true samo sum
 SNR = 10;
 
-N = 8;               % vrednost sa grafika singular.vredn
+N = 6;               % vrednost sa grafika singular.vredn
 
 
 [Y0,Z0,S0] = ReadAD1('dva_cilindra_3v_01m.ad1',f,M);
@@ -20,7 +20,6 @@ dS = S0 - S1;
 
 %sum
 if dodaj_sum
-    rng(1)
     for i=1:M
         sig=dS(:,i);
         sig=awgn(sig,SNR,'measured');

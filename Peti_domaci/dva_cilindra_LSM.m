@@ -6,7 +6,7 @@ nx = 50;
 ny = 50;
 nz = 1;
 
-dodaj_sum = true;   % true samo sum
+dodaj_sum = false;   
 SNR = 10;
 
 [Y0,Z0,S0] = ReadAD1('dva_cilindra_3v_01m.ad1',f,M);
@@ -15,9 +15,7 @@ SNR = 10;
 
 dS = S0 - S1;
 
-%sum
 if dodaj_sum
-    rng(1)
     for i=1:M
         sig=dS(:,i);
         sig=awgn(sig,SNR,'measured');
@@ -37,7 +35,6 @@ stem(normSingVr)
 I = zeros(nx,ny);
 
 alpha = 0.1*maxSingVr;
-I = zeros(nx,ny);
 for i=1:nx
     for j=1:ny
         g = squeeze(Ez1(i,j,1,:));
@@ -50,8 +47,8 @@ for i=1:nx
     end
 end
 
-x = linspace(-0.4,0.4,nx);
-y = linspace(-0.4,0.4,ny);
+x = linspace(min(x1(:)), max(x1(:)), nx);
+y = linspace(min(y1(:)), max(y1(:)), ny);
 
 I = I/max(max(I));
 
@@ -63,5 +60,5 @@ colormap(ctb);
 colorbar('location','EastOutside');
 xlabel('x [m]')
 ylabel('y [m]')
-title('LSM dva cilindra, alfa=0.1, sa sumom')
+title('LSM dva cilindra, alfa=0.1, bez suma')
 daspect([1,1,1]);
