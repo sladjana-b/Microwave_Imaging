@@ -2,9 +2,35 @@
 FN=0
 FD=0
 NPR=1
+FNS=0
+MDF=0
+RL=0
+ReverseOrder=0
 [READ-ONLY]
 RO=0
 [STATUS]
 FGN=0
 PMC=0
 PEC=0
+[RCS]
+TYPE=0
+[SAVE CURRENTS]
+CONDITION=0
+FORMAT=s
+[PERIODIC BOUNDARY]
+PB=0
+[Output_Result_Currents]
+Density=0
+Ncp=0
+Ncs=0
+[Output Results]
+Currents_CCS=0
+Currents_SEL=0
+Currents_RPE=0
+[AWI]
+FQ=1
+FI=0
+TE=0
+N1=2
+N2=2
+N3=2

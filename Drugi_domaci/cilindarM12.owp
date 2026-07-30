@@ -1,3 +1,4 @@
+ 0    0    0    0    0    0s   
 +----------------------------------------------------------------------------+
 !                                                                            !
 !                                 INPUT DATA                                 !
@@ -879,21 +880,43 @@
  NUMBER OF POINTS      (MAX      250000 ) :         164
  NUMBER OF ELEMENTS    (MAX      250000 ) :         232
  NUMBER OF EXCITATIONS (MAX      200000 ) :          12
- NUMBER OF UNKNOWNS  (MAX      100000 ) :        1140
- - electric currents (MAX      100000 ) :        1140
- - magnetic currents (MAX      100000 ) :           0
+ NUMBER OF UNKNOWNS  (MAX         333 ) :        1140
+ - electric currents (MAX         333 ) :        1140
+ - magnetic currents (MAX         333 ) :           0
  
- JOB IS SUCCESSFULLY FINISHED!
+ 
+ ERROR: INPUT DATA OVERFLOW!
+ JOB IS IRREGULARLY TERMINATED!
+ ERROR: List Input data from Output menu to see error message!
  
  Simulation time (seconds)
-Topological analysis  :      0.03
-Memory Allocation     :      0.00
-Matrix fill           :      1.37
-Exciation column fill :      0.00
-Matrix storage        :      0.00
-Matrix equilibration  :      0.00
-Matrix solution       :      0.74
-Additional Excitations:      0.02
-Output results        :      0.00
+Topological analysis  :     0.0000
+Memory Allocation     :     0.0000
+Matrix fill           :     0.0000
+Exciation column fill :     0.0000
+Matrix storage        :     0.0000
+Matrix equilibration  :     0.0000
+Matrix solution       :     0.0000
+Additional Excitations:     0.0000
+Output results        :     0.0000
 
-cilindarM12: Elapsed time: 2.52 sec.
+
++-----------------------+
+! Stages of simulation: !
++-----------------------+
+
+Matrix fill: CPU 
+Matrix solution: CPU 
+Near-field calculation: CPU 
+
++-------------------------+
+! Hardware configuration: !
++-------------------------+
+
+Number of processor cores: 8
+Number of logical processors: 16
+Installed memory (RAM): 27.845 GB
+
+Number of used threads: 4
+
+cilindarM12: Elapsed time: 0.55 sec.
